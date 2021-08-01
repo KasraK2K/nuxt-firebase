@@ -9,6 +9,8 @@ export default {
     async sendMessage() {
       const currentToken = await this.$fire.messaging.getToken();
 
+      console.log(currentToken);
+
       const data = JSON.stringify({
         notification: {
           title: "firebase title",
