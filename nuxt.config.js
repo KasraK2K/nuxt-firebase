@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -42,28 +44,28 @@ export default {
       appId: "1:885727063733:web:217947bc31410aa9f918fc"
       // measurementId: "<measurementId>"
     },
+    onFirebaseHosting: false,
     services: {
-      auth: true,
-      firestore: true,
-      functions: true,
-      storage: true,
-      database: true,
-      performance: true,
-      analytics: true,
-      remoteConfig: true,
-      messaging: true
-    },
-    messaging: {
-      createServiceWorker: true,
-      fcmPublicVapidKey:
-        "BDFpsBW57B9ecMUwTP1xFG8MN50ioyQea36J-pWoCjQN2pQWnwP5Ps_jZ5WvyiiWJBbwM-Tzcc3KhKypnw1GDkk",
-      inject: "./firebase-messaging-sw.js"
-      // actions: [
-      //   {
-      //     action: "kasraAction",
-      //     url: "https://www.google.com?action=kasraAction"
-      //   }
-      // ]
+      // auth: true,
+      // firestore: true,
+      // functions: true,
+      // storage: true,
+      // database: true,
+      // performance: true,
+      // analytics: true,
+      // remoteConfig: true,
+      messaging: {
+        createServiceWorker: true,
+        fcmPublicVapidKey:
+          "BDFpsBW57B9ecMUwTP1xFG8MN50ioyQea36J-pWoCjQN2pQWnwP5Ps_jZ5WvyiiWJBbwM-Tzcc3KhKypnw1GDkk",
+        inject: fs.readFileSync("./firebase-messaging-sw.js")
+        // actions: [
+        //   {
+        //     action: "kasraAction",
+        //     url: "https://www.google.com?action=kasraAction"
+        //   }
+        // ]
+      }
     }
   },
 

@@ -34,12 +34,10 @@ export default {
       const response = await this.$axios(config);
 
       this.$fire.messaging.onMessage(payload => {
-        alert("onMessage");
         console.info("Message received: ", payload);
       });
 
       this.$fire.messaging.onTokenRefresh(async () => {
-        alert("onTokenRefresh");
         const refreshToken = await this.$fire.messaging.getToken();
         console.log("Token Refreshed", refreshToken);
       });

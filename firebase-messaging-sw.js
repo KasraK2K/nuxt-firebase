@@ -1,16 +1,3 @@
-
-importScripts(
-  'https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js'
-)
-importScripts(
-  'https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js'
-)
-firebase.initializeApp({"apiKey":"AIzaSyAsouuLftlGcBKG4k8QYY87tGuc7uwYE-g","authDomain":"fcm-web-demo-67273.firebaseapp.com","projectId":"fcm-web-demo-67273","storageBucket":"fcm-web-demo-67273.appspot.com","messagingSenderId":"885727063733","appId":"1:885727063733:web:217947bc31410aa9f918fc"})
-
-// Retrieve an instance of Firebase Messaging so that it can handle background
-// messages.
-const messaging = firebase.messaging()
-
 self.addEventListener("push", function(e) {
   data = e.data.json();
   var options = {
