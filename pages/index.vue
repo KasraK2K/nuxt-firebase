@@ -40,6 +40,12 @@ export default {
       //   updated_at: new Date()
       // });
 
+      /** upsert doc */
+      // usersRef.doc("kasra").set({
+      //   name: "hasan2",
+      //   role: "2"
+      // });
+
       /** delete one */
       // usersRef.doc("Z4ydJIU6FHGecX9cK5Wv").delete();
 
