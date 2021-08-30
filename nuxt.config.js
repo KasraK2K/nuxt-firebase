@@ -36,28 +36,28 @@ export default {
 
   firebase: {
     config: {
-      apiKey: "AIzaSyAsQpQHHcgaEhz0BeJ1lj9cuuHMcaXbGHY",
-      authDomain: "test-jeanswest.firebaseapp.com",
-      projectId: "test-jeanswest",
-      storageBucket: "test-jeanswest.appspot.com",
-      messagingSenderId: "836085134543",
-      appId: "1:836085134543:web:e6babc3a0602a2a88773ba",
-      measurementId: "G-HJJN0B1KKX"
+      apiKey: "AIzaSyAGJiFJ_MM39WSxiiDU3C-d2OuSbCygKAM",
+      authDomain: "jeanswest-avakatan.firebaseapp.com",
+      projectId: "jeanswest-avakatan",
+      storageBucket: "jeanswest-avakatan.appspot.com",
+      messagingSenderId: "765850527197",
+      appId: "1:765850527197:web:e1babae636801dbef90234",
+      measurementId: "G-X2KSH2B3LY"
     },
     onFirebaseHosting: false,
     services: {
-      auth: true,
+      // auth: true,
       firestore: true,
-      functions: true,
-      storage: true,
-      database: true,
-      performance: true,
+      // functions: true,
+      // storage: true,
+      // database: true,
+      // performance: true,
       analytics: true,
-      remoteConfig: true,
+      // remoteConfig: true,
       messaging: {
         createServiceWorker: true,
         fcmPublicVapidKey:
-          "BHiiwafrukmAaGlmIji03uKDNSYmAcKk0t4Wf814r68KQRoAnUJoFUJItfT3hP1Y7-2yv59sJNTQtmDQyJQveTs",
+          "BB7sHR0uXrXXdb7hvNUk8yroT-YJCm9KoVhLVKxRcArMtL8AQDtZjsDyT-__WVc6AaqnObTbLtVJJoS78d_Czf4",
         inject: fs.readFileSync("./firebase-messaging-sw.js")
         // actions: [
         //   {

@@ -7,7 +7,10 @@
 export default {
   methods: {
     async sendMessage() {
-      const currentToken = await this.$fire.messaging.getToken();
+      const currentToken = await this.$fire.messaging.getToken({
+        vapidKey: "BB7sHR0uXrXXdb7hvNUk8yroT-YJCm9KoVhLVKxRcArMtL8AQDtZjsDyT-__WVc6AaqnObTbLtVJJoS78d_Czf4",
+      });
+      console.log(currentToken)
 
       /* -------------------------------------------------------------------------- */
       /*                                  Firestore                                 */
@@ -86,7 +89,7 @@ export default {
       //   headers: {
       //     "Content-Type": "application/json",
       //     Authorization:
-      //       "key=AAAAwqqOtM8:APA91bHyy1hvs4jKmbbMz5SPzWVf-OnAuRmljfr2ZELI9UWUsVAMyKBhvVwKFZS8FM68lI8pBlYaQYvdKZ9QDTQjM8YGG5oq9PqUM021NpChPWP64yLC_cM36KtiYpE9TUhGPM8iiyMD"
+      //       "key=AAAAslA_pd0:APA91bHwEFx2N-eKzNs9aaI_sSADjMwN17iN-FFfiLDAmGdoxKflvtJMZv-JlB5L8El__miEQKIutJpNb24hUJ7id2FRG8XWVrwJg4NJOz793GzCz6unQqsDfwRS5azUxeJuNq0li4ZV"
       //   },
       //   data
       // };
