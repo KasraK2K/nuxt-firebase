@@ -1,16 +1,26 @@
 <template>
   <!-- <Tutorial /> -->
-  <button @click="sendMessage">Send Message</button>
+  <button @click="metrixEvent">Send Message</button>
 </template>
 
 <script>
 export default {
   methods: {
+    metrixEvent() {
+      var attributes = {};
+      attributes["first_name"] = "Kasra";
+      attributes["last_name"] = "Karami";
+      attributes["manufacturer"] = "JeansWest";
+
+      this.$_metrix.sendEvent("xempb", attributes);
+      this.$_metrix.sendRevenue("xempb", 12000, "IRR", "order id");
+    },
     async sendMessage() {
       const currentToken = await this.$fire.messaging.getToken({
-        vapidKey: "BB7sHR0uXrXXdb7hvNUk8yroT-YJCm9KoVhLVKxRcArMtL8AQDtZjsDyT-__WVc6AaqnObTbLtVJJoS78d_Czf4",
+        vapidKey:
+          "BB7sHR0uXrXXdb7hvNUk8yroT-YJCm9KoVhLVKxRcArMtL8AQDtZjsDyT-__WVc6AaqnObTbLtVJJoS78d_Czf4"
       });
-      console.log(currentToken)
+      console.log(currentToken);
 
       /* -------------------------------------------------------------------------- */
       /*                                  Firestore                                 */
